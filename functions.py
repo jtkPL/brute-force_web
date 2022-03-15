@@ -9,7 +9,6 @@ def process_pass(url, user, pass_list):
 
         datas['username']=user
         datas['password']=password
-
         
         result = requests.post(url, data=datas)
 
@@ -17,6 +16,5 @@ def process_pass(url, user, pass_list):
 
         if not response.find('Invalid username or password') > 0 :
             
-           print(datas)
-     
-    return None
+            print(datas)
+            return None
